@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block page_content %}
+    <h3>Pick your favorite from our divine list</h3> <br>
+    <div class="row">
+        {% for hall in halls %}
+            <div class="col-sm-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img class="card-image-top embed-responsive embed-responsive-item" src="{{ hall.image }}" alt="Card image cap">
+                        </div>
+
+                        <h5 class="card-title">{{hall.name}}</h5>
+                        <p class="card-text">{{ hall.description | slice:":200" }}</p>
+                        <a href="{% url 'hall_detail' hall.pk %}" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

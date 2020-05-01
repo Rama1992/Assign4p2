@@ -1,0 +1,27 @@
+{% extends 'nav.html' %}
+
+{% block page_content %}
+    <div>
+        <img src="https://cdn.shopify.com/s/files/1/0558/3725/files/Sheer_voile_fabric_collection_2048x2048.jpg?v=1565703910" style="width: 100%; height: 700px;">
+    </div>
+    <div class="container">
+        <h3>{{ hall.name }}</h3> <br>
+        <div class="row">
+            <div class="col-md-3">
+                <p>City: {{ hall.city }}, &nbsp State: {{ hall.state }}</p>
+                <p>Capacity: {{ hall.capacity }}</p>
+                <p>Contact: {{ hall.phone_number }}</p>
+            </div>
+            <div class="col-md-9">
+                <p> {{ hall.description }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- have to add datepicker here -->
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
