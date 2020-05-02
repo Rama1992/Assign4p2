@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'ehbapp',
     'crispy_forms',
+    'tempus_dominus',
+    'bootstrap_datepicker'
 ]
 
 MIDDLEWARE = [

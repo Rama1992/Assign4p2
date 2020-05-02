@@ -152,6 +152,9 @@
                  <ul class="nav navbar-nav">
                      <li><a href="{% url 'base.html' %}">Home</a></li>
                      <li><a href="{% url 'hall_list' %}">Event Halls</a></li>
+                     {% if user.is_authenticated %}
+                        <li><a href={% url 'hall_bookings' %}>Booking Details</a></li>
+                    {% endif %}
                  </ul>
                  <!--<ul class="nav navbar-nav navbar-right">
                      <li><a href="#home">Login</a></li>
@@ -163,18 +166,6 @@
                     {% else %}
                         <li><a href="{% url 'login' %}">Login</a></li>
                     {% endif %}
-                </ul>
-
-                <ul  class="nav navbar-nav">
-                    {% if user.is_authenticated %}
-                        {% if user.profile.is_employee %}
-                            <li><a href="#">View Bookings</a></li>
-                            <li><a href="#">Add Event Halls</a></li>
-                        {% elif user.profile.is_customer %}
-                            <li><a href="#">Booking Details</a></li>
-                        {% endif %}
-                    {% endif %}
-
                 </ul>
             </div>
         </div>

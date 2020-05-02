@@ -18,7 +18,11 @@ class EventHall(models.Model):
     phone_number = models.CharField(max_length=10)
     #is_reserved = models.NullBooleanField()
 
+    def __str__(self):
+        return self.name
 
-class Bookings(models.Model):
-    booked_hall_id = models.ForeignKey(EventHall, on_delete=models.CASCADE)
-    booked_on = models.DateTimeField()
+
+class Reservations(models.Model):
+    booked_hall_name = models.ForeignKey(EventHall, on_delete=models.CASCADE)
+    booked_on_date = models.DateField()
+    booked_customer_Name = models.ForeignKey('accounts.customuser', to_field='id', on_delete=models.CASCADE)
