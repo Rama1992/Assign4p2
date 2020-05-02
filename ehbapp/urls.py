@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="ehbhome.html"),
-    path('home/', views.loginview, name="base.html"),
+    path('home/', views.loginview, name="a_base.html"),
     path('halls/', views.eventhall_list, name="hall_list"),
     path('halls/add', views.hall_addhall, name="add_eventhalls"),
     path('halls/<int:pk>/edit', views.hall_edithall, name="edit_eventhalls"),

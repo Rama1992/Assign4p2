@@ -109,7 +109,7 @@ def hall_editbooking(request, pk):
             return render(request, 'hall_bookings.html', context)
     elif request.method == 'GET':
         form = BookingEditForm(instance=booking)
-    return render(request, 'hall_editbooking.html', {'form': form})
+        return render(request, 'hall_editbooking.html', {'form': form})
 
 
 def hall_deletebooking(request, pk):

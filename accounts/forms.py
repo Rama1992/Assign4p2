@@ -26,10 +26,9 @@ class CustomerRegistrationForm(forms.ModelForm):
     state = forms.CharField(label='State')
     zipcode = forms.CharField(label='Zipcode')
     phone_number = forms.CharField(label='Phone Number')
-
     class Meta:
         model = CustomUser
-        fields = ('username', 'email', 'address', 'city', 'state', 'zipcode', 'phone_number')
+        fields = ['username', 'email', 'address', 'city', 'state', 'zipcode', 'phone_number']
 
     def clean_password2(self):
         cd = self.cleaned_data

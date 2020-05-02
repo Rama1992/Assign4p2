@@ -1,3 +1,4 @@
+{% extends "a_base.html" %}
 {% load crispy_forms_tags %}
 {% block page_content %}
     <div class ="content-section">
@@ -16,7 +17,7 @@
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Not registered? Register as <a class="ml-2" href="{% url 'customer_register' %}">Customer</a> <a class="ml-2" href="{% url 'employee_register' %}">Employee</a>
+                Not registered? <a class="ml-2" href="{% url 'register' %}"> Register NOW </a>
             </small>
         </div>
     </div>
